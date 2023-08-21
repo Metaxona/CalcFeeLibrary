@@ -31,11 +31,11 @@ library CalcFeeLibrary {
     */
     function calcFee(uint256 originalAmount, uint256 fee) external pure returns(uint256) {
 
-        uint256 divisor = 10 ** 2 ;
+        uint256 denominator = 10 ** 2 ;
         
-        if (fee > divisor) revert InvalidFeeError("Fee cannot be greater than 100");
+        if (fee > denominator) revert InvalidFeeError("Fee cannot be greater than 100");
 
-        return  (originalAmount * fee) / divisor;
+        return  (originalAmount * fee) / denominator;
     }
 
 
@@ -59,11 +59,11 @@ library CalcFeeLibrary {
     */
     function calcFeeWithPrecision(uint256 originalAmount, uint256 fee, uint8 precision) external pure returns(uint256) {
         
-        uint256 divisor = (10 ** ( 2 + (1 * precision) ) );
+        uint256 denominator = (10 ** ( 2 + (1 * precision) ) );
 
-        if (fee > divisor) revert InvalidFeeError("Fee cannot be greater than 10 ** (2 + (1 * precision) )");
+        if (fee > denominator) revert InvalidFeeError("Fee cannot be greater than 10 ** (2 + (1 * precision) )");
                 
-        return (originalAmount * fee) / divisor;
+        return (originalAmount * fee) / denominator;
     }
 
     /**
@@ -79,11 +79,11 @@ library CalcFeeLibrary {
     */
     function calcFinal(uint256 originalAmount, uint256 fee) external pure returns(uint256) {
         
-        uint256 divisor = 10 ** 2 ;
+        uint256 denominator = 10 ** 2 ;
 
-        if (fee > divisor) revert InvalidFeeError("Fee cannot be greater than 100");
+        if (fee > denominator) revert InvalidFeeError("Fee cannot be greater than 100");
 
-        return originalAmount - ( (originalAmount * fee) / divisor );
+        return originalAmount - ( (originalAmount * fee) / denominator );
     }
 
     /**
@@ -107,11 +107,11 @@ library CalcFeeLibrary {
     */
     function calcFinalWithPrecision(uint256 originalAmount, uint256 fee, uint8 precision) external pure returns(uint256) {
         
-        uint256 divisor = (10 ** ( 2 + (1 * precision) ) );
+        uint256 denominator = (10 ** ( 2 + (1 * precision) ) );
 
-        if (fee > divisor) revert InvalidFeeError("Fee cannot be greater than 10 ** (2 + (1 * precision) )");
+        if (fee > denominator) revert InvalidFeeError("Fee cannot be greater than 10 ** (2 + (1 * precision) )");
 
-        return originalAmount - ( (originalAmount * fee) / divisor );
+        return originalAmount - ( (originalAmount * fee) / denominator );
     }
 
 }
