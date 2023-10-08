@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.20;
 
 
 /**
-@title CalcFee Library
+@title CalcFee Library (Internal Version)
 @custom:contract-name CalcFeeLibrary
-@custom:version 0.0.1
+@custom:version 0.0.2
 @author Metaxona
 @custom:author-url https://metaxona.com 
 @custom:github https://github.com/metaxona
@@ -15,7 +15,7 @@ pragma solidity ^0.8.18;
     This can be used in cases where you attach a fee on a transaction to be taken
     as profit or to be burned. 
 */
-library CalcFeeLibrary {
+library CalcFeeLibraryInternal {
     
     error InvalidFeeError(string errorMsg);
     

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.20;
 
 
 /**
 @title CalcFee Library
 @custom:contract-name CalcFeeLibrary
-@custom:version 0.0.1
+@custom:version 0.0.2
 @author Metaxona
 @custom:author-url https://metaxona.com 
 @custom:github https://github.com/metaxona
