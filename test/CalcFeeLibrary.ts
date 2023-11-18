@@ -21,7 +21,7 @@ function calcFinalPercentage(
 ): number {
   return Math.round(value - value * (percent / 10 ** (2 + 1 * precision)));
 }
-
+    
 describe("Calc Fee Library", function () {
   const testValues = [
     {
